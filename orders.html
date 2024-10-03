@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placement</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .field {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            color: white;
+            background-color: #28a745; /* Green color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Order Summary</h2>
+        <div class="field"><strong>Shipping To:</strong> <span id="shippingTo"></span></div>
+        <div class="field"><strong>Items:</strong> <span id="itemsCount"></span></div>
+        <div class="field"><strong>Price:</strong> Rs.<span id="price"></span></div>
+        <div class="field"><strong>Delivery:</strong> Rs.<span id="delivery"></span></div>
+        <div class="field"><strong>Order Total:</strong> Rs.<span id="orderTotal"></span></div>
+        <!-- <button id="actionButton">Place your Order</button> -->
+        <button id="placeOrderButton">Place your Order</button>
+        
+    </div>
+
+    <script src="orders.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

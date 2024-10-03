@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .payment-mode {
+            margin: 20px 0;
+        }
+
+        .payment-mode label {
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            color: white;
+            background-color: #28a745; /* Green color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        #continueButton {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #continueButton:hover {
+            background-color: #0056b3;
+        }
+
+        .disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select Payment Mode</h2>
+        
+        <div class="payment-mode">
+            <input type="radio" id="CashPayment" name="paymentMode" value="CashPayment" checked>
+            <label for="CashPayment">Cash Payment</label>
+        </div>
+        
+        <div class="payment-mode">
+            <input type="radio" id="CreditPayment" name="paymentMode" value="CreditPayment" disabled>
+            <label for="CreditPayment">Credit Payment</label>
+        </div>
+        
+        <button id="continueButton">Continue</button>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

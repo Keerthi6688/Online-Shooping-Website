@@ -1,0 +1,251 @@
+/* Default Styles for Light Mode */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #28a745;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+body.dark-mode nav {
+    background-color: #007bff;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Form Styling for Signup & Signin Pages */
+.container, .signin-container {
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+  
+body.dark-mode .container, body.dark-mode .signin-container {
+    background-color: #333;
+    border-color: #555;
+    color: #fff;
+}
+
+.container input, .signin-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+body.dark-mode .container input, body.dark-mode .signin-container input {
+    background-color: #444;
+    border-color: #666;
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+body.dark-mode button {
+    background-color: #007bff;
+}
+
+body.dark-mode button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Form Styling */
+@media screen and (max-width: 768px) {
+    .container, .signin-container {
+        width: 90%;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container, .signin-container {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Settings Dropdown Menu */
+.settings-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.settings-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.settings-dropdown:hover .settings-dropdown-content {
+    display: block;
+}
+
+.settings-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.settings-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+body.dark-mode .settings-dropdown-content {
+    background-color: #333;
+}
+
+body.dark-mode .settings-dropdown-content a {
+    color: white;
+}
+
+body.dark-mode .settings-dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Responsive Settings Dropdown */
+@media screen and (max-width: 768px) {
+    .settings-dropdown-content {
+        min-width: 100px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #28a745;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+body.dark-mode footer {
+    background-color: #007bff;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+body.dark-mode button {
+    background-color: #007bff;
+}
+
+body.dark-mode button:hover {
+    background-color: #0056b3;
+
+/* Additions for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    button {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+}
+
+
+}

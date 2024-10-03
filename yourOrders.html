@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Orders</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Your Orders page styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9; /* Added a light background color */
+        }
+
+        h1 {
+            text-align: center; /* Center the title */
+            color: #333; /* Darker color for better readability */
+            margin-bottom: 20px; /* Spacing below the title */
+        }
+
+        /* Orders Container */
+        #ordersContainer {
+            display: flex;
+            flex-wrap: wrap; /* Wrap items to maintain 3 per row */
+            gap: px; /* Space between each product */
+            justify-content: space-between; /* Ensure products are evenly spaced */
+            padding: 20px;
+        }
+
+        /* Product Item */
+        .product-item {
+            flex: 1 1 calc(33.33% - 20px); /* 3 products per row */
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #fff;
+            max-width: 300px;
+            margin-bottom: 20px; /* Ensure some spacing for smaller screens */
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .product-item h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .product-item p {
+            font-size: 1em;
+            color: #333;
+            margin: 5px 0; /* Add some margin between paragraphs */
+        }
+
+        /* Style for the Purchased On date */
+        .product-item .purchased-on {
+            font-size: 0.9em;
+            color: #555; /* Slightly lighter color for the date */
+            margin-top: 10px;
+        }
+
+        /* Style for the Go Back to HomePage button */
+        .back-to-home-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 30px; /* Reduce button padding */
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            width: fit-content; /* Button takes the width of its content */
+        }
+
+        .back-to-home-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Add responsiveness for smaller screens */
+        @media (max-width: 1024px) {
+            .product-item {
+                flex: 1 1 calc(50% - 20px); /* 2 products per row on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-item {
+                flex: 1 1 100%; /* 1 product per row on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Orders</h1>
+    <div id="ordersContainer"></div>
+
+    <!-- Go Back to HomePage Button -->
+    <button class="back-to-home-btn" onclick="goBackToHome()">Go Back to HomePage</button>
+
+    <script src="yourOrders.js"></script>
+</body>
+</html>

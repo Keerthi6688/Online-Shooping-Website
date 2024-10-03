@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Products</title>
+    <style>
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 300px;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        table {
+            width: 100%; /* Full width */
+            border-collapse: collapse; /* Collapses borders */
+            margin-top: 20px; /* Space above the table */
+        }
+
+        th, td {
+            padding: 15px; /* Padding inside cells */
+            text-align: left; /* Left-align text */
+            border: 1px solid #4B0082; /* Border color */
+        }
+
+        th {
+            background-color: #4B0082; /* Purple background for header */
+            color: #ffffff; /* White text color for header */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Light gray for even rows */
+        }
+
+        tr:hover {
+            background-color: #e6e6e6; /* Darker gray for row hover effect */
+        }
+
+        img {
+            max-width: 100px; /* Maximum width for images */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Slightly rounded corners */
+        }
+
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+         .pagination i {
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #4B0082;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .pagination i:hover {
+            background-color: #3b0070;
+        }
+
+        .page-number {
+            margin: 0 5px;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+          /* Styles for search bar */
+          .search-container {
+            display: flex; /* Use flexbox for alignment */
+            align-items: center; /* Center items vertically */
+            margin: 20px 0; /* Space above and below the search bar */
+        }
+
+        .search-container input {
+            
+            margin-left: 10px; /* Space between filter dropdown and search bar */
+            padding: 8px;
+            width: 200px; /* Width of the search bar */
+            border: 1px solid #ddd;
+            border-radius: 5px; /* Rounded corners for the search bar */
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            background-color: #4B0082; /* Button color */
+            color: white; /* Text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer on hover */
+        }
+
+        .search-container button:hover {
+            background-color: #3b0070; /* Darker button color on hover */
+        }
+
+
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Product Listing</h1>
+
+    <!-- Dropdown to choose filter options (only "All Products" for now) -->
+    <select id="filterOptions">
+        <option value="all">Display All Products</option>
+        <option value="Category">Display Products By Category</option>
+        <!-- Other filter options like Category, Individual Item will be added later -->
+    </select>
+
+     <!-- Search bar next to filter options -->
+     <div class="search-container" id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Search individual item..." />
+        <button id="searchButton">Search</button>
+    </div>
+
+
+ <!-- Div for category radio buttons -->
+ <div id="categoryContainer" style="display: none;"></div>
+
+    <!-- Div to display the products -->
+    <div id="productContainer"></div>
+
+
+
+<script src="display_individual_item.js"></script>
+  <script src="display_product.js"></script>
+</body>
+</html>

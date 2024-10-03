@@ -1,0 +1,334 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navbar Styles */
+  nav {
+    background-color:gray;
+    padding: 1rem;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around; /* Spaces items evenly */
+    align-items: center;
+  }
+  nav ul li {
+    margin-right: 20px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  /* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+  
+  /* Main Content */
+  section {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Signup Form Styles */
+  .signup-form {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-form h2 {
+    text-align: center;
+  }
+  
+  .signup-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup-form form label,
+  .signup-form form input,
+  .signup-form form textarea,
+  .signup-form form button {
+    margin-bottom: 15px;
+  }
+  
+  .signup-form form input,
+  .signup-form form textarea {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .signup-form form button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #responseMessage {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  /* Settings Dropdown Styles */
+.settings-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .settings-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .settings-dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .settings-dropdown .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .settings-dropdown .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.dark-mode nav {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark-mode .signup-form,
+  body.dark-mode .signin-form {
+    background-color: #2c2c2c;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .signup-form input,
+  body.dark-mode .signin-form input,
+  body.dark-mode .signup-form textarea,
+  body.dark-mode .signin-form button {
+    background-color: #3d3d3d;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .signup-form button,
+  body.dark-mode .signin-form button {
+    background-color: #444;
+  }
+  
+
+  /* Common styles for form containers */
+.signin-container {
+    width: 300px; /* Set a fixed width for the form */
+    margin: 100px auto; /* Center the form vertically and horizontally */
+    padding: 20px;
+    border: 1px solid #ccc; /* Add border for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  .signin-container h2 {
+    text-align: center; /* Center the heading */
+  }
+  
+  .signin-container label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space between label and input */
+  }
+  
+  .signin-container input {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+  }
+  
+  .signin-container button {
+    width: 100%; /* Full width for button */
+    padding: 10px; /* Padding inside button */
+    background-color: #28a745; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .signin-container button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .message {
+    text-align: center; /* Center the message text */
+    color: red; /* Red color for error messages */
+    margin-top: 10px; /* Space above message */
+  }
+  
+
+  /* Responsive Form Styling */
+@media screen and (max-width: 768px) {
+    .container, .signin-container {
+        width: 90%;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container, .signin-container {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+/* Responsive Settings Dropdown */
+@media screen and (max-width: 768px) {
+    .settings-dropdown-content {
+        min-width: 100px;
+    }
+}
+
+/* Additions for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    button {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+}
+  
+/* Search Bar Styling */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .search-form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+    width: 200px; 
+    box-sizing: border-box;
+  }
+  
+  .search-form button {
+    background-color:purple;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+  }
+  
+  .search-form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Navbar Updates for New Headers */
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styling for Settings Dropdown */
+  .settings-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .settings-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .settings-dropdown:hover .settings-dropdown-content {
+    display: block;
+  }
+  
+  .settings-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .settings-dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  body.dark-mode .settings-dropdown-content {
+    background-color: #333;
+  }
+  
+  body.dark-mode .settings-dropdown-content a {
+    color: white;
+  }
+  
+  body.dark-mode .settings-dropdown-content a:hover {
+    background-color: #555;
+  }
+  

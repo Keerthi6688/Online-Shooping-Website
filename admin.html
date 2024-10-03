@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <!-- Use existing styles or create new ones -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="admin_dashboard.html">Dashboard</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to the Admin Dashboard</h1>
+        <p>Manage products, orders, and customers here.</p>
+
+        <!-- Placeholder for CRUD Operations -->
+        <section id="crud-operations">
+            <h2>Product Management</h2>
+            <button onclick="window.location.href='add_product.html'">Add New Product</button>
+            <button onclick="window.location.href='add_category.html'">Add New Category</button>
+            <button onclick="window.location.href='manage_products.html'">Manage Existing Products</button>
+            <button onclick="window.location.href='display_product.html'">Display Products</button>
+            <button onclick="location.href='update_product.html'">Update Products</button> <!-- Update Products button -->
+            
+        </section>
+    </main>
+
+    <script src="admin.js"></script> <!-- Admin-specific JavaScript -->
+</body>
+</html>
